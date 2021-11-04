@@ -39,6 +39,10 @@ class Floor
    
     // for external reporting
     friend ostream& operator<<(ostream&, const Floor&); // say name, location, #'s of up/down riders waiting
+    
+    int getNumberOfUpRiders() const {return upRiders.size();}
+    unsigned int getNumberOfDownRiders() const {return downRiders.size();}
+    
 };
 
 #endif
