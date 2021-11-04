@@ -18,12 +18,12 @@ class Elevator
     static const int DOWN = -1;
 
     // elevator metrics
-    const int speed; // inches per second, up or down
-    const unsigned int CAPACITY;
     int location; // inches above ground level
     int direction; // equal to IDLE, UP, DOWN
     int atFloorIndex; // -1 if door is closed
     int timer;
+    const int speed; // inches per second, up or down
+    const unsigned int CAPACITY;
 
     vector<Rider> riders;
 
