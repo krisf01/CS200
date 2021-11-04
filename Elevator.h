@@ -51,6 +51,9 @@ class Elevator
 
     // friend function
     friend ostream& operator<<(ostream&, const Elevator&);
+    
+    unsigned int getNumberOfRiders() const {return riders.size();}
+    
 };
 
 #endif
