@@ -1,0 +1,43 @@
+Submit this final version of the Elevator app! 
+
+Completing the Elevator Simulation Project. Follow the requirements below and complete item 4 ~ 9.
+
+Progress And Status
+Going back to our elevator logic in Module 8 ~ 9, let's look at the progress so far and where we have yet to go.
+The first five items are done. In this assignment we're adding the ability for elevators to close their doors and start moving.
+
+Open their door if there is a rider to disembark. DONE in v.1 in Module 8
+Disembark a rider if the door is open and there's a rider who wants to get off. DONE in v.2 in Module 9
+Board a rider if the door is open and a rider wants to board. DONE in v.2 in Module 9
+Hold the door open for a few seconds in case more riders show up. DONE in v.3 in Module 13
+After waiting a few seconds, and there are riders on the elevator, close the door and get moving. DONE in v.3 in Module 13
+If the elevator is already between floors, keep moving -- stop at a floor if its panel button is pressed.
+If an elevator is idle and the up/down button is pressed, open the door for the rider to board.
+If there's a floor with a lit up/down button, close the door and start moving there.
+Close the door and go idle.
+
+Requirements
+We've all been working with a building design with 5 floors and 3 identical elevators. Now it's time for you to customize your building!
+
+In Building.cpp, customize 6 or more floors, at or above or below ground level.
+We're not building a doll house, so make sure your elevations (in inches) are reasonable for human beings.
+
+Customize 4 or more elevators, so they are not all alike in terms of capacity and speed.
+Use your imagination -- consider small, fast express elevators and slow, large freight elevators in the mix.
+
+Remove "seeds". There's no more need for riders starting on elevators at time zero. 
+Remove the VisualBuilding's constructor and the console app's code block that puts riders on elevators before the simulation begins.
+
+Console Elevator
+If you are running the console version, set the rider arrival rate to a value that "works well" with your building. 
+That is, the rate should not be so small that elevators spend a lot of time idle, and the rate should not be so large that riders accumulate on floors in large crowds. 
+Also, start arrivals at time zero and end after 300 seconds (5 minutes), like this in the main CPP:
+
+  double myArrivalRate = ...; // you choose!
+  Building::action(i < 300 ? myArrivalRate : 0);
+  
+Visual Elevator
+It is NOT required that you do a GUI version of this assignment. But if you do, this is what you should see after the simulation runs for a while and you 
+lower the rider arrival rate to zero and wait for the elevators to stop moving -- something like this, with elevators idle at top and/or bottom floors, 
+and no remaining riders anywhere (click image to download Windows animated EXE).
+
