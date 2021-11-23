@@ -1,0 +1,53 @@
+Write a GUI app. You will need Microsoft Visual Studio 2017 for this -- it's available on all our lab workstations, or you can use your own
+installation of VS2019 on your own computer.
+
+1. Create A Project
+Using Visual Studio, create a dialog-based MFC application named Shapes.7, using the MFC in a static library.
+Then copy your Shapes v.6 pShapes.h and pShapes.cpp into the project's folder that contains all its other H and CPP files. 
+Add them as project source and header files in Visual Studio, but put #include "stdafx.h" (for the later version VS,  #include "pch.h" instead) 
+as the first #include in your pShapes.cpp.  (Either stdafx.h or pch.h files are created by the MFC project by default.)
+
+2. Identify Yourself
+Include your name and student ID in the window's title. Also include a personalized icon for the application, and a personalized About Box.
+
+3. Write The User Interface
+This version of Shapes will not get it's input from a file, nor will it output to a TXT file. 
+It will process one shape at a time as the user (a) chooses a shape and (b) sets its dimensions. 
+The output is to the app's window, using the operator<< already created in Shapes v.6.
+
+Provide a way for the user to select one of the eight geometric objects -- it may be by pull-down menu or radio buttons or tabs, per your choice.
+
+You may start the program with a pre-selected shape, or not -- your choice. When a shape is selected, you may blank unused dimension input boxes, or not -- your choice.
+
+Whenever a shape is selected, the user should see properly-labeled input Edit Box controls for the dimensions associated with that shape. For example,
+if "square" is selected, the user should see an input box for entering the "side" dimension.
+
+4. Images
+Include at least one image -- it can be a background or logo. Or you can have images of the shapes, showing the one for the currently-selected shape. 
+(And no, the icon doesn't count!)
+
+Remember that you need to resize your .BMP in Paint or some other image editor -- VS does not scale the picture for you. 
+The size that you specify in the visual layout editor is only for your planning purposes.
+
+And remember that BMPs are to be placed in the /res folder, or else they won't be included in your backup ZIP.
+
+5. Calculate
+Either have a button to start the calculation for the selected object and dimensions, 
+or provide handlers so that calculations are done automatically as the user types dimensions or selects a shape -- your choice.
+
+Provide a text box or label for displaying the results. Use an ostringstream object and your operator<< function to get the results to be displayed. 
+If you want multi-line output, set the multi-line property of the box to true, and use \r\n as the line break.
+You may modify your shapes' output functions if you wish to do so.
+
+In your handler(s), create a token vector as you did in the v.4 main function, and push two, three, or four C++ strings into it, 
+depending on how many dimensions the shape needs. The first string is ignored -- it's the name of the shape type! 
+After that push one, two, or three dimensions as C++ versions of the MFC strings you get from the edit boxes. 
+Use the token vector in your constructors for the various shapes (as you did in v.4, 5, and 6) in the handler(s).
+
+You only need to create ONE temporary object at a time in the handler. 
+Use static objects -- there is no need or advantage to using dynamically- allocated objects, because they are used once and then discarded as in Assignment 1, Shapes v.1.
+
+You may have a problem with naming conflicts, because the MFC does not use namespaces.
+There is a class named Rectangle in the MFC, which may conflict with one of your classes. 
+There are several ways to fix this, and you may do whatever works, but the way provided in the language is to use namespaces.
+Here's an example, using an arbitrarily named namespace, "comsc" -- note that this effectively changes the name of your Rectangle class to comsc::Rectangle:
