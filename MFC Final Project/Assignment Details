@@ -1,0 +1,23 @@
+Create Your Own MFC Project
+In this final project, you can apply anything you learned from this course to design your own GUI application with MFC controls introduced in Module 11 and Module 12. 
+
+Any project you would like to create use MFC with graphic user interface.
+From the Assignment 11 (Elevator Simulation V2.1) and Assignment 12 (Shape GUI)  you did, think about how to use those features for other services you would like to work. 
+For example,  online shopping, course registration, hotel registration, food ordering....
+
+Project Requirements
+Pick your own topic to create Your Own MFC Project, the project scope will be as large as one regular programming assignment. Here is the grading rubric and project requirements:
+
+Source codes organization (30 points)
+The creativity of the project topic. (10 points)
+Use MFC controls (Combo Box, Tab Control, or Radio Buttons) to display and response to the user's choices (multiple options) (25 points)
+At least two images displayed in the GUI (10 points)
+Personalize the Information tab (5 points)
+Submission format. Zip the whole project in one zipped file under 10MB (10 points)
+Record the project demonstration and upload the video on YouTube (10 points)
+Zip And Submit
+Create Your Own MFC Project, zip all project source files into a compressed ZIP file (same format as Assignment 12) with necessary screenshots.
+In case, I will have an issue to run and test your project. 
+One short video of the project demonstration is required. 
+Simply record (screen capture of your desktop) and demonstrate how to get the user input and response the result into the GUI.
+Upload the video on YouTube and submit the link.
